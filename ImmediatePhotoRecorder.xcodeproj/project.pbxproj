@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D1F25F574A9CB1D9781021F /* Pods_ImmediatePhotoRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2A9A54D3BF399BB025B79FE /* Pods_ImmediatePhotoRecorder.framework */; };
 		683881411C8B94FB0060D32D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683881401C8B94FB0060D32D /* AppDelegate.swift */; };
-		683881431C8B94FB0060D32D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683881421C8B94FB0060D32D /* ViewController.swift */; };
 		683881461C8B94FB0060D32D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683881441C8B94FB0060D32D /* Main.storyboard */; };
 		683881481C8B94FB0060D32D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 683881471C8B94FB0060D32D /* Assets.xcassets */; };
 		6838814B1C8B94FB0060D32D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683881491C8B94FB0060D32D /* LaunchScreen.storyboard */; };
@@ -17,11 +17,13 @@
 /* Begin PBXFileReference section */
 		6838813D1C8B94FB0060D32D /* ImmediatePhotoRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImmediatePhotoRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		683881401C8B94FB0060D32D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		683881421C8B94FB0060D32D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		683881451C8B94FB0060D32D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		683881471C8B94FB0060D32D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6838814A1C8B94FB0060D32D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6838814C1C8B94FB0060D32D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADF4A150AD1DBB8632649CFB /* Pods-ImmediatePhotoRecorder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmediatePhotoRecorder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImmediatePhotoRecorder/Pods-ImmediatePhotoRecorder.debug.xcconfig"; sourceTree = "<group>"; };
+		AECB7D9CCAB2B632E1B70E3E /* Pods-ImmediatePhotoRecorder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmediatePhotoRecorder.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImmediatePhotoRecorder/Pods-ImmediatePhotoRecorder.release.xcconfig"; sourceTree = "<group>"; };
+		B2A9A54D3BF399BB025B79FE /* Pods_ImmediatePhotoRecorder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImmediatePhotoRecorder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +31,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D1F25F574A9CB1D9781021F /* Pods_ImmediatePhotoRecorder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01DB0A3BF7C87268E50BF420 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ADF4A150AD1DBB8632649CFB /* Pods-ImmediatePhotoRecorder.debug.xcconfig */,
+				AECB7D9CCAB2B632E1B70E3E /* Pods-ImmediatePhotoRecorder.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		683881341C8B94FB0060D32D = {
 			isa = PBXGroup;
 			children = (
 				6838813F1C8B94FB0060D32D /* ImmediatePhotoRecorder */,
 				6838813E1C8B94FB0060D32D /* Products */,
+				01DB0A3BF7C87268E50BF420 /* Pods */,
+				F57CD659E89413347095E822 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +69,20 @@
 			isa = PBXGroup;
 			children = (
 				683881401C8B94FB0060D32D /* AppDelegate.swift */,
-				683881421C8B94FB0060D32D /* ViewController.swift */,
 				683881441C8B94FB0060D32D /* Main.storyboard */,
 				683881471C8B94FB0060D32D /* Assets.xcassets */,
 				683881491C8B94FB0060D32D /* LaunchScreen.storyboard */,
 				6838814C1C8B94FB0060D32D /* Info.plist */,
 			);
 			path = ImmediatePhotoRecorder;
+			sourceTree = "<group>";
+		};
+		F57CD659E89413347095E822 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B2A9A54D3BF399BB025B79FE /* Pods_ImmediatePhotoRecorder.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +92,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6838814F1C8B94FB0060D32D /* Build configuration list for PBXNativeTarget "ImmediatePhotoRecorder" */;
 			buildPhases = (
+				026DCBE7F285D706AE9B3C74 /* Check Pods Manifest.lock */,
 				683881391C8B94FB0060D32D /* Sources */,
 				6838813A1C8B94FB0060D32D /* Frameworks */,
 				6838813B1C8B94FB0060D32D /* Resources */,
+				80D1FC71C8F5BFE70BF561CF /* Embed Pods Frameworks */,
+				97FBBA68641436D22A50E4AA /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,12 +155,59 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		026DCBE7F285D706AE9B3C74 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		80D1FC71C8F5BFE70BF561CF /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImmediatePhotoRecorder/Pods-ImmediatePhotoRecorder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97FBBA68641436D22A50E4AA /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ImmediatePhotoRecorder/Pods-ImmediatePhotoRecorder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		683881391C8B94FB0060D32D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				683881431C8B94FB0060D32D /* ViewController.swift in Sources */,
 				683881411C8B94FB0060D32D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,6 +317,7 @@
 		};
 		683881501C8B94FB0060D32D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ADF4A150AD1DBB8632649CFB /* Pods-ImmediatePhotoRecorder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ImmediatePhotoRecorder/Info.plist;
@@ -257,6 +329,7 @@
 		};
 		683881511C8B94FB0060D32D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AECB7D9CCAB2B632E1B70E3E /* Pods-ImmediatePhotoRecorder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ImmediatePhotoRecorder/Info.plist;
@@ -285,6 +358,7 @@
 				683881511C8B94FB0060D32D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
