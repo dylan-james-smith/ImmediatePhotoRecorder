@@ -24,8 +24,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             })
         )
         
+        if PFUser.currentUser() != nil {
+            let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("ProfileViewController")
+            window?.rootViewController = viewController
+        }
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "userDidLogout:", name: "logout", object: nil)
+        
         // Override point for customization after application launch.
         return true
+    }
+    
+    func userDidLogout(notification: NSNotification) {
+        PFUser.logOut()
+        window?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
     }
 
     func applicationWillResignActive(application: UIApplication) {

@@ -18,8 +18,8 @@ The following **optional** features are implemented:
 
 - [ ] Show the username and creation time for each post
 - [ ] After the user submits a new post, show a progress HUD while the post is being uploaded to Parse.
-- [ ] User Profiles:
---- [ ] Allow the logged in user to add a profile photo
+- [x] User Profiles:
+--- [x] Allow the logged in user to add a profile photo
 --- [ ] Display the profile photo with each post
 --- [ ] Tapping on a post's username or profile photo goes to that user's profile page
 
@@ -28,7 +28,9 @@ The following **additional** features are implemented:
 - [x] Alert message when: user or password empty, user exists, password wrong. Jumps to error textField. 
 - [x] keybord return (next, send) advances field and signs in
 - [x] add font and title
-- [ ] choose the photo from camera roll or taking a new picture
+- [ ] login progress spinner
+- [ ] image loading progress spinner
+- [x] choose the photo from camera roll or taking a new picture
 - [ ] Pull to refresh
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
@@ -40,7 +42,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+![Walkthrough - CPU-wk6-ImmediatePhotoRecorder](walkthrough.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 

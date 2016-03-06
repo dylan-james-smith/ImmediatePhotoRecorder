@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Login View Controller-->
@@ -137,11 +138,89 @@
                         <outlet property="passwordField" destination="dhu-zq-0sN" id="v1G-WQ-pSL"/>
                         <outlet property="signinButton" destination="3vN-af-8MM" id="Iui-Kt-qhU"/>
                         <outlet property="usernameField" destination="gEG-Fx-ok9" id="DCO-cG-TzW"/>
+                        <segue destination="jLC-IH-cz4" kind="presentation" identifier="loginSegue" id="fbb-yE-yFG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CN1-ca-XVE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="93.5" y="-783.5"/>
         </scene>
+        <!--Profile View Controller-->
+        <scene sceneID="Z9V-od-MbQ">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="jLC-IH-cz4" customClass="ProfileViewController" customModule="ImmediatePhotoRecorder" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xip-BL-owW"/>
+                        <viewControllerLayoutGuide type="bottom" id="Fho-BW-i9s"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nZA-1m-gzt">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D1d-ju-1D5" userLabel="Logout Image Button">
+                                <rect key="frame" x="170" y="494" width="35" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="cM2-Ne-K87"/>
+                                    <constraint firstAttribute="width" constant="35" id="gNi-yP-Boy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                                <state key="normal" title="Logout" image="arrow"/>
+                                <connections>
+                                    <action selector="onLogout:" destination="jLC-IH-cz4" eventType="touchUpInside" id="qLS-ha-oFQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kR-tg-PJi">
+                                <rect key="frame" x="148" y="323" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1vE-7M-11U" userLabel="logout text button">
+                                <rect key="frame" x="166" y="521" width="44" height="30"/>
+                                <state key="normal" title="logout">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onLogout:" destination="jLC-IH-cz4" eventType="touchUpInside" id="iv4-rS-Sfi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKy-4D-W08">
+                                <rect key="frame" x="112" y="131" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nKy-4D-W08" secondAttribute="height" multiplier="1:1" id="Ojx-iz-Rki"/>
+                                </constraints>
+                                <state key="normal" title="Add an Image"/>
+                                <connections>
+                                    <action selector="onProfileImage:" destination="jLC-IH-cz4" eventType="touchUpInside" id="mjO-FZ-wDn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="D1d-ju-1D5" firstAttribute="top" secondItem="5kR-tg-PJi" secondAttribute="bottom" constant="150" id="16k-o2-xwn"/>
+                            <constraint firstItem="1vE-7M-11U" firstAttribute="top" secondItem="D1d-ju-1D5" secondAttribute="bottom" constant="-8" id="45K-fF-qa7"/>
+                            <constraint firstItem="5kR-tg-PJi" firstAttribute="centerY" secondItem="nZA-1m-gzt" secondAttribute="centerY" id="7aV-ln-YqO"/>
+                            <constraint firstItem="5kR-tg-PJi" firstAttribute="top" secondItem="nKy-4D-W08" secondAttribute="bottom" constant="42" id="8mv-An-bN3"/>
+                            <constraint firstItem="nKy-4D-W08" firstAttribute="top" secondItem="Xip-BL-owW" secondAttribute="bottom" constant="111" id="Gu3-1W-PXm"/>
+                            <constraint firstItem="5kR-tg-PJi" firstAttribute="centerX" secondItem="nZA-1m-gzt" secondAttribute="centerX" id="UNT-7S-UL2"/>
+                            <constraint firstItem="1vE-7M-11U" firstAttribute="centerX" secondItem="nZA-1m-gzt" secondAttribute="centerX" id="l4p-vn-oGR"/>
+                            <constraint firstItem="D1d-ju-1D5" firstAttribute="centerX" secondItem="nZA-1m-gzt" secondAttribute="centerX" id="pAM-pM-ANF"/>
+                            <constraint firstItem="nKy-4D-W08" firstAttribute="centerX" secondItem="nZA-1m-gzt" secondAttribute="centerX" id="qZx-8s-oiX"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="logoutButton" destination="D1d-ju-1D5" id="5OD-PL-sNf"/>
+                        <outlet property="profileImageButton" destination="nKy-4D-W08" id="9VQ-FM-6ea"/>
+                        <outlet property="usernameLabel" destination="5kR-tg-PJi" id="9Ao-sH-4vK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="je9-6e-JRp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="590.5" y="-783.5"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="arrow" width="512" height="512"/>
+    </resources>
 </document>

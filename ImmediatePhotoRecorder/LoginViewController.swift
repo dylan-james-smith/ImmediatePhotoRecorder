@@ -19,7 +19,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         usernameField.delegate = self
         passwordField.delegate = self
         
-        signinButton.layer.cornerRadius = 5
+        signinButton.layer.cornerRadius = signinButton.frame.width/5
         
         usernameField.becomeFirstResponder()
         
@@ -74,9 +74,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     print(error.localizedDescription)
                 }
             }else{
-                print("User logged in successfully")
-                self.performSegueWithIdentifier("photoSegue", sender: nil)
-                // display view controller that needs to shown after successful login
+                print("User \"\(username)\" logged in successfully")
+                self.performSegueWithIdentifier("loginSegue", sender: nil)
             }
         }
         
