@@ -13,6 +13,7 @@
 		683881481C8B94FB0060D32D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 683881471C8B94FB0060D32D /* Assets.xcassets */; };
 		6838814B1C8B94FB0060D32D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683881491C8B94FB0060D32D /* LaunchScreen.storyboard */; };
 		683881531C8BF6480060D32D /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683881521C8BF6480060D32D /* StringExtensions.swift */; };
+		6838815B1C8C082B0060D32D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6838815A1C8C082B0060D32D /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,8 @@
 		6838814A1C8B94FB0060D32D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6838814C1C8B94FB0060D32D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		683881521C8BF6480060D32D /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = Extensions/StringExtensions.swift; sourceTree = "<group>"; };
+		6838815A1C8C082B0060D32D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6838815C1C8C0F420060D32D /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		ADF4A150AD1DBB8632649CFB /* Pods-ImmediatePhotoRecorder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmediatePhotoRecorder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImmediatePhotoRecorder/Pods-ImmediatePhotoRecorder.debug.xcconfig"; sourceTree = "<group>"; };
 		AECB7D9CCAB2B632E1B70E3E /* Pods-ImmediatePhotoRecorder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmediatePhotoRecorder.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImmediatePhotoRecorder/Pods-ImmediatePhotoRecorder.release.xcconfig"; sourceTree = "<group>"; };
 		B2A9A54D3BF399BB025B79FE /* Pods_ImmediatePhotoRecorder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImmediatePhotoRecorder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -52,6 +55,7 @@
 		683881341C8B94FB0060D32D = {
 			isa = PBXGroup;
 			children = (
+				6838815C1C8C0F420060D32D /* README.md */,
 				6838813F1C8B94FB0060D32D /* ImmediatePhotoRecorder */,
 				6838813E1C8B94FB0060D32D /* Products */,
 				01DB0A3BF7C87268E50BF420 /* Pods */,
@@ -70,22 +74,31 @@
 		6838813F1C8B94FB0060D32D /* ImmediatePhotoRecorder */ = {
 			isa = PBXGroup;
 			children = (
+				683881591C8C08030060D32D /* Views */,
 				683881401C8B94FB0060D32D /* AppDelegate.swift */,
 				683881441C8B94FB0060D32D /* Main.storyboard */,
 				683881471C8B94FB0060D32D /* Assets.xcassets */,
-				683881541C8BF67E0060D32D /* Extension */,
+				683881541C8BF67E0060D32D /* Extensions */,
 				683881491C8B94FB0060D32D /* LaunchScreen.storyboard */,
 				6838814C1C8B94FB0060D32D /* Info.plist */,
 			);
 			path = ImmediatePhotoRecorder;
 			sourceTree = "<group>";
 		};
-		683881541C8BF67E0060D32D /* Extension */ = {
+		683881541C8BF67E0060D32D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				683881521C8BF6480060D32D /* StringExtensions.swift */,
 			);
-			name = Extension;
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		683881591C8C08030060D32D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				6838815A1C8C082B0060D32D /* LoginViewController.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		F57CD659E89413347095E822 /* Frameworks */ = {
@@ -219,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6838815B1C8C082B0060D32D /* LoginViewController.swift in Sources */,
 				683881531C8BF6480060D32D /* StringExtensions.swift in Sources */,
 				683881411C8B94FB0060D32D /* AppDelegate.swift in Sources */,
 			);
