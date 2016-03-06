@@ -12,6 +12,7 @@
 		683881461C8B94FB0060D32D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683881441C8B94FB0060D32D /* Main.storyboard */; };
 		683881481C8B94FB0060D32D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 683881471C8B94FB0060D32D /* Assets.xcassets */; };
 		6838814B1C8B94FB0060D32D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 683881491C8B94FB0060D32D /* LaunchScreen.storyboard */; };
+		683881531C8BF6480060D32D /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 683881521C8BF6480060D32D /* StringExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		683881471C8B94FB0060D32D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6838814A1C8B94FB0060D32D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6838814C1C8B94FB0060D32D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		683881521C8BF6480060D32D /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = Extensions/StringExtensions.swift; sourceTree = "<group>"; };
 		ADF4A150AD1DBB8632649CFB /* Pods-ImmediatePhotoRecorder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmediatePhotoRecorder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImmediatePhotoRecorder/Pods-ImmediatePhotoRecorder.debug.xcconfig"; sourceTree = "<group>"; };
 		AECB7D9CCAB2B632E1B70E3E /* Pods-ImmediatePhotoRecorder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmediatePhotoRecorder.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImmediatePhotoRecorder/Pods-ImmediatePhotoRecorder.release.xcconfig"; sourceTree = "<group>"; };
 		B2A9A54D3BF399BB025B79FE /* Pods_ImmediatePhotoRecorder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImmediatePhotoRecorder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -71,10 +73,19 @@
 				683881401C8B94FB0060D32D /* AppDelegate.swift */,
 				683881441C8B94FB0060D32D /* Main.storyboard */,
 				683881471C8B94FB0060D32D /* Assets.xcassets */,
+				683881541C8BF67E0060D32D /* Extension */,
 				683881491C8B94FB0060D32D /* LaunchScreen.storyboard */,
 				6838814C1C8B94FB0060D32D /* Info.plist */,
 			);
 			path = ImmediatePhotoRecorder;
+			sourceTree = "<group>";
+		};
+		683881541C8BF67E0060D32D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				683881521C8BF6480060D32D /* StringExtensions.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 		F57CD659E89413347095E822 /* Frameworks */ = {
@@ -208,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				683881531C8BF6480060D32D /* StringExtensions.swift in Sources */,
 				683881411C8B94FB0060D32D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,6 +336,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.heydylan.ImmediatePhotoRecorder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -336,6 +349,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.heydylan.ImmediatePhotoRecorder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
