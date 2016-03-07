@@ -233,24 +233,23 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmu-Lb-EO3">
                                 <rect key="frame" x="35" y="28" width="305" height="305"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bmu-Lb-EO3" secondAttribute="height" multiplier="1:1" id="OtH-D0-P4p"/>
                                 </constraints>
-                                <state key="normal" title="Add an Image"/>
+                                <state key="normal" title="Add an Image">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="onImageButton:" destination="PGb-wh-aTG" eventType="touchUpInside" id="OUP-Xn-DBe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbG-9g-m6B">
-                                <rect key="frame" x="162" y="413" width="50" height="30"/>
-                                <state key="normal" title="Upload"/>
-                                <connections>
-                                    <action selector="onUpload:" destination="PGb-wh-aTG" eventType="touchUpInside" id="IHF-aE-AWK"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Csw-qI-bLP">
-                                <rect key="frame" x="163" y="478" width="48" height="30"/>
-                                <state key="normal" title="Cancel"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Csw-qI-bLP">
+                                <rect key="frame" x="153" y="496" width="69" height="25"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="contentEdgeInsets" minX="-12" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Cancel" image="Home"/>
                                 <connections>
                                     <action selector="onCancel:" destination="PGb-wh-aTG" eventType="touchUpInside" id="w9h-WV-eHk"/>
                                 </connections>
@@ -258,11 +257,20 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Caption your image here" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="l0F-w2-rDy">
                                 <rect key="frame" x="25" y="341" width="325" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" translatesAutoresizingMaskIntoConstraints="NO" id="3oV-6X-tIe">
                                 <rect key="frame" x="35" y="335" width="305" height="3"/>
                             </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbG-9g-m6B">
+                                <rect key="frame" x="144" y="413" width="86" height="48"/>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="contentEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Upload" image="uploadWhite"/>
+                                <connections>
+                                    <action selector="onUpload:" destination="PGb-wh-aTG" eventType="touchUpInside" id="IHF-aE-AWK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -288,8 +296,10 @@
                     <navigationItem key="navigationItem" id="kYy-0P-5aS"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="cancelButton" destination="Csw-qI-bLP" id="oow-zd-lSU"/>
                         <outlet property="captionField" destination="l0F-w2-rDy" id="NOJ-Zt-5de"/>
                         <outlet property="imageButton" destination="bmu-Lb-EO3" id="QHS-9I-6Tf"/>
+                        <outlet property="uploadButton" destination="qbG-9g-m6B" id="ZLg-py-rAy"/>
                         <outlet property="uploadProgress" destination="3oV-6X-tIe" id="N5h-yq-alf"/>
                     </connections>
                 </viewController>
@@ -338,10 +348,13 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKy-4D-W08">
                                 <rect key="frame" x="112" y="131" width="150" height="150"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nKy-4D-W08" secondAttribute="height" multiplier="1:1" id="Ojx-iz-Rki"/>
                                 </constraints>
-                                <state key="normal" title="Add an Image"/>
+                                <state key="normal" title="Add an Image">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="onProfileImage:" destination="jLC-IH-cz4" eventType="touchUpInside" id="mjO-FZ-wDn"/>
                                 </connections>
@@ -461,6 +474,7 @@
         <image name="Home" width="25" height="25"/>
         <image name="HomeWhite" width="25" height="25"/>
         <image name="arrow" width="256" height="256"/>
+        <image name="uploadWhite" width="48" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="7EQ-cy-UJ3"/>

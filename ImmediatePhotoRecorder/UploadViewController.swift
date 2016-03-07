@@ -8,18 +8,39 @@
 
 import UIKit
 
-class UploadViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+class UploadViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var imageButton: UIButton!
     @IBOutlet weak var uploadProgress: UIProgressView!
     @IBOutlet weak var captionField: UITextField!
+    @IBOutlet weak var uploadButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        captionField.delegate = self
+        roundButton(imageButton)
+        roundButton(uploadButton)
+        roundButton(cancelButton)
+        
         // Do any additional setup after loading the view.
     }
     
+    func roundButton(button: UIButton){
+        button.layer.cornerRadius = button.frame.width/6
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        print("return pressed")
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -67,6 +88,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                     self.uploadProgress.hidden = false
                     if prog == 100 {
                         self.uploadProgress.setProgress(100, animated: false)
+                        self.tabBarController?.selectedIndex = 0
                     } else {
                         self.uploadProgress.setProgress(Float(prog), animated: true)
                     }
@@ -76,7 +98,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func onCancel(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        tabBarController?.selectedIndex = 0
     }
     /*
     // MARK: - Navigation
