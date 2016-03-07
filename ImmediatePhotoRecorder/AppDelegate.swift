@@ -27,8 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         )
         
         if PFUser.currentUser() != nil {
-            let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("tabBar")
-            window?.rootViewController = viewController
+            let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("tabBar") as UIViewController
+            window?.rootViewController = vc
         }
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "userDidLogout:", name: "logout", object: nil)

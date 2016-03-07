@@ -20,6 +20,8 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.initializeViews()
+        
         captionField.delegate = self
         roundButton(imageButton)
         roundButton(uploadButton)
@@ -83,13 +85,16 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
             ParseData.postUserImage(imageButton.backgroundImageForState(.Normal), withCaption: captionField.text, withCompletion: { (success, error) -> Void in
                 self.uploadProgress.hidden = true
                 NSNotificationCenter.defaultCenter().postNotificationName("photoDidPost", object: nil)
-//                self.dismissViewControllerAnimated(true, completion: nil)
                 
                 }, withProgress: { (prog) -> Void in
                     self.uploadProgress.hidden = false
                     if prog == 100 {
                         self.uploadProgress.setProgress(100, animated: false)
-                        self.tabBarController?.selectedIndex = 0
+                        
+                        let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 2 * Int64(NSEC_PER_SEC))
+                        dispatch_after(time, dispatch_get_main_queue()) {
+                            self.tabBarController?.selectedIndex = 0
+                        }
                     } else {
                         self.uploadProgress.setProgress(Float(prog), animated: true)
                     }
@@ -98,7 +103,15 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
     }
     
+    func initializeViews() {
+        imageButton.setBackgroundImage(UIImage(named:"uploadWhite"), forState: .Normal)
+        captionField.text = ""
+        uploadProgress.hidden = true
+        uploadProgress.setProgress(0, animated: false)
+    }
+    
     @IBAction func onCancel(sender: AnyObject) {
+        self.initializeViews()
         tabBarController?.selectedIndex = 0
     }
     /*

@@ -31,6 +31,7 @@ The following **additional** features are implemented:
 - [x] Floating user profile header
 - [ ] large login progress spinner
 - [ ] large image loading progress spinner
+- [ ] add change password to profile
 - [ ] add profile Bio
 - [x] choose the photo from camera roll or taking a new picture
 - [x] Pull to refresh
@@ -45,7 +46,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-![Walkthrough - CPU-wk6-ImmediatePhotoRecorder](walkthrough.gif)
+![Walkthrough - CPU-wk6-ImmediatePhotoRecorder](walkthroughNew2.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 

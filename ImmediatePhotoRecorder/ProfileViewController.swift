@@ -25,6 +25,10 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             user = PFUser.currentUser()
         }
         
+        if profileImageButton.backgroundImageForState(.Normal) == nil {
+            profileImageButton.setBackgroundImage(UIImage(named:"uploadGrey"), forState: .Normal)
+        }
+        
         profileImageButton.clipsToBounds = true
         profileImageButton.layer.masksToBounds = true
         profileImageButton.layer.cornerRadius = profileImageButton.frame.width/2

@@ -252,7 +252,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="bmu-Lb-EO3" secondAttribute="height" multiplier="1:1" id="OtH-D0-P4p"/>
                                 </constraints>
-                                <state key="normal" title="Add an Image">
+                                <state key="normal">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -367,13 +367,13 @@
                                     <action selector="onLogout:" destination="jLC-IH-cz4" eventType="touchUpInside" id="iv4-rS-Sfi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKy-4D-W08">
-                                <rect key="frame" x="175" y="215" width="25" height="25"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKy-4D-W08">
+                                <rect key="frame" x="135" y="175" width="106" height="106"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nKy-4D-W08" secondAttribute="height" multiplier="1:1" id="Ojx-iz-Rki"/>
                                 </constraints>
-                                <state key="normal" image="Upload">
+                                <state key="normal">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -499,7 +499,6 @@
         <image name="ContactsWhite" width="25" height="25"/>
         <image name="Home" width="25" height="25"/>
         <image name="HomeWhite" width="25" height="25"/>
-        <image name="Upload" width="24" height="24"/>
         <image name="arrow" width="256" height="256"/>
         <image name="uploadWhite" width="48" height="48"/>
     </resources>
