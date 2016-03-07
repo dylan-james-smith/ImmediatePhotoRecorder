@@ -37,12 +37,21 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWX-fG-0kC">
-                                <rect key="frame" x="110" y="142" width="156" height="28"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="12"/>
-                                <state key="normal" title="first time? Signup here"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vN-af-8MM">
+                                <rect key="frame" x="154" y="339" width="68" height="34"/>
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="nbH-d8-Lwx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                <state key="normal" title="Sign in"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="nbH-d8-Lwx"/>
+                                    </mask>
+                                </variation>
                                 <connections>
-                                    <action selector="onSignUp:" destination="JbB-Zn-rgF" eventType="touchUpInside" id="k1g-4Q-qRS"/>
+                                    <action selector="onSignIn:" destination="JbB-Zn-rgF" eventType="touchUpInside" id="TP6-fv-qwb"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ITM-y1-Iwm">
@@ -70,21 +79,12 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vN-af-8MM">
-                                <rect key="frame" x="154" y="339" width="68" height="34"/>
-                                <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="55" id="nbH-d8-Lwx"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
-                                <state key="normal" title="Sign in"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="nbH-d8-Lwx"/>
-                                    </mask>
-                                </variation>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWX-fG-0kC">
+                                <rect key="frame" x="82" y="381" width="211" height="28"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="12"/>
+                                <state key="normal" title="first time? -Signup- click here"/>
                                 <connections>
-                                    <action selector="onSignIn:" destination="JbB-Zn-rgF" eventType="touchUpInside" id="TP6-fv-qwb"/>
+                                    <action selector="onSignUp:" destination="JbB-Zn-rgF" eventType="touchUpInside" id="k1g-4Q-qRS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -104,7 +104,9 @@
                             <constraint firstItem="BRg-fO-BfA" firstAttribute="centerY" secondItem="9gM-AP-OHq" secondAttribute="centerY" id="KLm-2V-jnb"/>
                             <constraint firstItem="BRg-fO-BfA" firstAttribute="top" secondItem="ITM-y1-Iwm" secondAttribute="bottom" constant="44" id="LUt-Ia-jM0"/>
                             <constraint firstItem="LWX-fG-0kC" firstAttribute="top" secondItem="3vN-af-8MM" secondAttribute="bottom" constant="30" id="MFh-9q-zkJ"/>
+                            <constraint firstItem="3vN-af-8MM" firstAttribute="top" secondItem="LWX-fG-0kC" secondAttribute="bottom" constant="169" id="Qab-8R-t7P"/>
                             <constraint firstAttribute="trailing" secondItem="gEG-Fx-ok9" secondAttribute="trailing" constant="12" id="Qys-sM-pmH"/>
+                            <constraint firstItem="LWX-fG-0kC" firstAttribute="top" secondItem="3vN-af-8MM" secondAttribute="top" id="RVu-O8-h34"/>
                             <constraint firstItem="gEG-Fx-ok9" firstAttribute="top" secondItem="LWX-fG-0kC" secondAttribute="bottom" constant="24" id="avX-GR-wNM"/>
                             <constraint firstItem="LWX-fG-0kC" firstAttribute="centerX" secondItem="9gM-AP-OHq" secondAttribute="centerX" id="b00-ZV-SxB"/>
                             <constraint firstItem="3vN-af-8MM" firstAttribute="centerX" secondItem="9gM-AP-OHq" secondAttribute="centerX" id="ejA-SM-huk"/>
@@ -118,20 +120,24 @@
                             <constraint firstItem="gEG-Fx-ok9" firstAttribute="leading" secondItem="bgc-dk-bwl" secondAttribute="trailing" id="raw-qc-cV2"/>
                             <constraint firstItem="dhu-zq-0sN" firstAttribute="leading" secondItem="bgc-dk-bwl" secondAttribute="trailing" id="smv-Cr-dj4"/>
                             <constraint firstItem="Z3q-zE-DFO" firstAttribute="top" secondItem="amS-x1-1RH" secondAttribute="bottom" constant="8" id="y5F-Kd-vIK"/>
+                            <constraint firstItem="LWX-fG-0kC" firstAttribute="top" secondItem="3vN-af-8MM" secondAttribute="bottom" constant="8" id="yv8-EK-msi"/>
                             <constraint firstItem="dhu-zq-0sN" firstAttribute="centerX" secondItem="9gM-AP-OHq" secondAttribute="centerX" constant="100.5" id="z9R-LZ-fsr"/>
                             <constraint firstItem="ITM-y1-Iwm" firstAttribute="centerX" secondItem="9gM-AP-OHq" secondAttribute="centerX" constant="-114" id="zAy-VC-dBC"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="MFh-9q-zkJ"/>
                                 <exclude reference="KLm-2V-jnb"/>
+                                <exclude reference="avX-GR-wNM"/>
                                 <exclude reference="EX8-Ii-jPa"/>
                                 <exclude reference="gzI-2K-vP8"/>
                                 <exclude reference="iz0-T6-no3"/>
                                 <exclude reference="qXt-KL-mO7"/>
                                 <exclude reference="z9R-LZ-fsr"/>
+                                <exclude reference="Qab-8R-t7P"/>
                                 <exclude reference="gyf-bE-ddI"/>
                                 <exclude reference="k41-9D-65k"/>
+                                <exclude reference="MFh-9q-zkJ"/>
+                                <exclude reference="RVu-O8-h34"/>
                             </mask>
                         </variation>
                     </view>
@@ -361,13 +367,13 @@
                                     <action selector="onLogout:" destination="jLC-IH-cz4" eventType="touchUpInside" id="iv4-rS-Sfi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKy-4D-W08">
-                                <rect key="frame" x="134" y="175" width="106" height="106"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nKy-4D-W08">
+                                <rect key="frame" x="175" y="215" width="25" height="25"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="nKy-4D-W08" secondAttribute="height" multiplier="1:1" id="Ojx-iz-Rki"/>
                                 </constraints>
-                                <state key="normal" title="Add an Image">
+                                <state key="normal" image="Upload">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -493,6 +499,7 @@
         <image name="ContactsWhite" width="25" height="25"/>
         <image name="Home" width="25" height="25"/>
         <image name="HomeWhite" width="25" height="25"/>
+        <image name="Upload" width="24" height="24"/>
         <image name="arrow" width="256" height="256"/>
         <image name="uploadWhite" width="48" height="48"/>
     </resources>
