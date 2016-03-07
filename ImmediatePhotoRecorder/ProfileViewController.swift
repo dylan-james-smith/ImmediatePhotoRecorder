@@ -55,6 +55,10 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
     @IBAction func onLogout(sender: AnyObject) {
         NSNotificationCenter.defaultCenter().postNotificationName("logout", object: nil)
     }

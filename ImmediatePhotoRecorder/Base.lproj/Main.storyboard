@@ -19,8 +19,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ImmediatePhotoRecorder" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="amS-x1-1RH">
-                                <rect key="frame" x="33" y="55" width="309" height="29"/>
-                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="21"/>
+                                <rect key="frame" x="55" y="55" width="265" height="25"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="18"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -37,20 +37,10 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vN-af-8MM">
-                                <rect key="frame" x="160" y="339" width="55" height="30"/>
-                                <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="55" id="nbH-d8-Lwx"/>
-                                </constraints>
-                                <state key="normal" title="Sign in"/>
-                                <connections>
-                                    <action selector="onSignIn:" destination="JbB-Zn-rgF" eventType="touchUpInside" id="TP6-fv-qwb"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LWX-fG-0kC">
-                                <rect key="frame" x="164" y="399" width="48" height="30"/>
-                                <state key="normal" title="Signup"/>
+                                <rect key="frame" x="110" y="142" width="156" height="28"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="12"/>
+                                <state key="normal" title="first time? Signup here"/>
                                 <connections>
                                     <action selector="onSignUp:" destination="JbB-Zn-rgF" eventType="touchUpInside" id="k1g-4Q-qRS"/>
                                 </connections>
@@ -75,11 +65,28 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="send" secureTextEntry="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="^ironic design choise as filler^" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z3q-zE-DFO">
-                                <rect key="frame" x="128" y="92" width="119" height="10"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
+                                <rect key="frame" x="149" y="88" width="77" height="6"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="5"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3vN-af-8MM">
+                                <rect key="frame" x="154" y="339" width="68" height="34"/>
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="55" id="nbH-d8-Lwx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="17"/>
+                                <state key="normal" title="Sign in"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="nbH-d8-Lwx"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="onSignIn:" destination="JbB-Zn-rgF" eventType="touchUpInside" id="TP6-fv-qwb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -98,6 +105,7 @@
                             <constraint firstItem="BRg-fO-BfA" firstAttribute="top" secondItem="ITM-y1-Iwm" secondAttribute="bottom" constant="44" id="LUt-Ia-jM0"/>
                             <constraint firstItem="LWX-fG-0kC" firstAttribute="top" secondItem="3vN-af-8MM" secondAttribute="bottom" constant="30" id="MFh-9q-zkJ"/>
                             <constraint firstAttribute="trailing" secondItem="gEG-Fx-ok9" secondAttribute="trailing" constant="12" id="Qys-sM-pmH"/>
+                            <constraint firstItem="gEG-Fx-ok9" firstAttribute="top" secondItem="LWX-fG-0kC" secondAttribute="bottom" constant="24" id="avX-GR-wNM"/>
                             <constraint firstItem="LWX-fG-0kC" firstAttribute="centerX" secondItem="9gM-AP-OHq" secondAttribute="centerX" id="b00-ZV-SxB"/>
                             <constraint firstItem="3vN-af-8MM" firstAttribute="centerX" secondItem="9gM-AP-OHq" secondAttribute="centerX" id="ejA-SM-huk"/>
                             <constraint firstItem="3vN-af-8MM" firstAttribute="trailing" secondItem="LWX-fG-0kC" secondAttribute="trailing" id="gyf-bE-ddI"/>
@@ -115,6 +123,7 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="MFh-9q-zkJ"/>
                                 <exclude reference="KLm-2V-jnb"/>
                                 <exclude reference="EX8-Ii-jPa"/>
                                 <exclude reference="gzI-2K-vP8"/>
@@ -263,9 +272,11 @@
                                 <rect key="frame" x="35" y="335" width="305" height="3"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qbG-9g-m6B">
-                                <rect key="frame" x="144" y="413" width="86" height="48"/>
+                                <rect key="frame" x="132" y="413" width="111" height="48"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                <inset key="contentEdgeInsets" minX="-20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="50q-cW-BBD"/>
+                                </constraints>
                                 <state key="normal" title="Upload" image="uploadWhite"/>
                                 <connections>
                                     <action selector="onUpload:" destination="PGb-wh-aTG" eventType="touchUpInside" id="IHF-aE-AWK"/>

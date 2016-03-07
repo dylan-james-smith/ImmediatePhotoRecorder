@@ -36,6 +36,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     @IBAction func onSignIn(sender: AnyObject) {
         
         
@@ -88,7 +92,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         if username.isWhitespace() == true || password.isWhitespace() == true {
             if username.isWhitespace(){
-                let alertController = UIAlertController(title: "Username is required", message: "", preferredStyle: .Alert)
+                let alertController = UIAlertController(title: "Username cannot be blank", message: "", preferredStyle: .Alert)
                 let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
                     self.usernameField.becomeFirstResponder()
                 }
@@ -96,7 +100,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 self.presentViewController(alertController, animated: true) {
                 }
             }else if password.isWhitespace(){
-                let alertController = UIAlertController(title: "Password is required", message: "", preferredStyle: .Alert)
+                let alertController = UIAlertController(title: "Password cannot be blank", message: "", preferredStyle: .Alert)
                 let OKAction = UIAlertAction(title: "OK", style: .Default) { (action) in
                     self.passwordField.becomeFirstResponder()
                 }

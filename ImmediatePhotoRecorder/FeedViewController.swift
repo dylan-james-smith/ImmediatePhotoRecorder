@@ -39,10 +39,11 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     override func viewWillAppear(animated: Bool) {
-        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
-        self.navigationController!.navigationBar.shadowImage = UIImage()
+        navigationController?.setNavigationBarHidden(true, animated: false)
+//        self.navigationController!.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: UIBarMetrics.Default)
+//        self.navigationController!.navigationBar.shadowImage = UIImage()
         
-        self.automaticallyAdjustsScrollViewInsets = false
+//        self.automaticallyAdjustsScrollViewInsets = false
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -54,6 +55,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("FeedCell", forIndexPath: indexPath) as! FeedCell
+        cell.selectionStyle = .None
         if let photos = photos {
             let photo = photos[indexPath.section]
             cell.captionLabel.text = photo["caption"] as? String
@@ -74,9 +76,9 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: UIScreen.mainScreen().bounds.size.width, height: 60))
         headerView.userInteractionEnabled = true
-        headerView.backgroundColor = UIColor(white: 1, alpha: 0.9)
+        headerView.backgroundColor = UIColor(white: 1, alpha: 0.8)
         
-        let profileImageView = UIImageView(frame: CGRect(x: 10, y: 10, width: 45, height: 45))
+        let profileImageView = UIImageView(frame: CGRect(x: 10, y: 25, width: 45, height: 45))
         profileImageView.clipsToBounds = true
         profileImageView.layer.cornerRadius = 22.5
         profileImageView.layer.borderColor = UIColor(white: 0.7, alpha: 0.8).CGColor
@@ -91,8 +93,9 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
             
         })
         
-        let username = UILabel(frame: CGRect(x: 70, y: 25, width: 50, height: 20))
+        let username = UILabel(frame: CGRect(x: 70, y: 25, width: 200, height: 20))
         username.text = user.username
+        username.font = UIFont(name: "Chalkduster", size: 14)
         
         headerView.addSubview(username)
         headerView.addSubview(profileImageView)
@@ -106,7 +109,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 45
+        return 60
     }
     
     
@@ -124,6 +127,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
                     completion()
                 }
                 print("By the power of data, I have the DATA")
+//                self.tabBarController?.selectedIndex = 0
             } else {
                 print("requestData find objets error")
             }
@@ -149,8 +153,8 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     
     override func viewWillDisappear(animated: Bool) {
-        self.navigationController!.navigationBar.setBackgroundImage(nil, forBarMetrics: UIBarMetrics.Default)
-        self.navigationController!.navigationBar.shadowImage = nil
+//        self.navigationController!.navigationBar.setBackgroundImage(nil, forBarMetrics: UIBarMetrics.Default)
+//        self.navigationController!.navigationBar.shadowImage = nil
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
