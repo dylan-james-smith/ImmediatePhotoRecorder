@@ -83,12 +83,11 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
             ParseData.postUserImage(imageButton.backgroundImageForState(.Normal), withCaption: captionField.text, withCompletion: { (success, error) -> Void in
                 self.uploadProgress.hidden = true
                 NSNotificationCenter.defaultCenter().postNotificationName("photoDidPost", object: nil)
-                self.dismissViewControllerAnimated(true, completion: nil)
+//                self.dismissViewControllerAnimated(true, completion: nil)
                 }, withProgress: { (prog) -> Void in
                     self.uploadProgress.hidden = false
                     if prog == 100 {
                         self.uploadProgress.setProgress(100, animated: false)
-                        self.tabBarController?.selectedIndex = 0
                     } else {
                         self.uploadProgress.setProgress(Float(prog), animated: true)
                     }
@@ -98,7 +97,8 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func onCancel(sender: AnyObject) {
-        tabBarController?.selectedIndex = 0
+        
+//        tabBarController?.selectedIndex = 0
     }
     /*
     // MARK: - Navigation

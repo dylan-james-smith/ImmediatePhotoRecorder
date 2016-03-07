@@ -19,6 +19,7 @@
 		685ADA661C8D2D69006FFDF8 /* ParseData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685ADA651C8D2D69006FFDF8 /* ParseData.swift */; };
 		685ADA681C8D31F4006FFDF8 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685ADA671C8D31F4006FFDF8 /* FeedViewController.swift */; };
 		685ADA6A1C8D3A12006FFDF8 /* UploadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685ADA691C8D3A12006FFDF8 /* UploadViewController.swift */; };
+		685ADA6C1C8D8FE2006FFDF8 /* NSDateExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 685ADA6B1C8D8FE2006FFDF8 /* NSDateExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		685ADA651C8D2D69006FFDF8 /* ParseData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseData.swift; sourceTree = "<group>"; };
 		685ADA671C8D31F4006FFDF8 /* FeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		685ADA691C8D3A12006FFDF8 /* UploadViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UploadViewController.swift; sourceTree = "<group>"; };
+		685ADA6B1C8D8FE2006FFDF8 /* NSDateExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtensions.swift; sourceTree = "<group>"; };
 		ADF4A150AD1DBB8632649CFB /* Pods-ImmediatePhotoRecorder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmediatePhotoRecorder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImmediatePhotoRecorder/Pods-ImmediatePhotoRecorder.debug.xcconfig"; sourceTree = "<group>"; };
 		AECB7D9CCAB2B632E1B70E3E /* Pods-ImmediatePhotoRecorder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmediatePhotoRecorder.release.xcconfig"; path = "Pods/Target Support Files/Pods-ImmediatePhotoRecorder/Pods-ImmediatePhotoRecorder.release.xcconfig"; sourceTree = "<group>"; };
 		B2A9A54D3BF399BB025B79FE /* Pods_ImmediatePhotoRecorder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImmediatePhotoRecorder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -86,7 +88,7 @@
 			children = (
 				683881401C8B94FB0060D32D /* AppDelegate.swift */,
 				683881541C8BF67E0060D32D /* Extensions */,
-				685ADA641C8D2D51006FFDF8 /* Models */,
+				685ADA641C8D2D51006FFDF8 /* API */,
 				6845E2F51C8D18BF00A3924A /* Cells */,
 				683881591C8C08030060D32D /* Views */,
 				683881441C8B94FB0060D32D /* Main.storyboard */,
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				683881521C8BF6480060D32D /* StringExtensions.swift */,
+				685ADA6B1C8D8FE2006FFDF8 /* NSDateExtensions.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -124,12 +127,12 @@
 			name = Cells;
 			sourceTree = "<group>";
 		};
-		685ADA641C8D2D51006FFDF8 /* Models */ = {
+		685ADA641C8D2D51006FFDF8 /* API */ = {
 			isa = PBXGroup;
 			children = (
 				685ADA651C8D2D69006FFDF8 /* ParseData.swift */,
 			);
-			name = Models;
+			name = API;
 			sourceTree = "<group>";
 		};
 		F57CD659E89413347095E822 /* Frameworks */ = {
@@ -268,6 +271,7 @@
 				683881531C8BF6480060D32D /* StringExtensions.swift in Sources */,
 				683881601C8C4F670060D32D /* ProfileViewController.swift in Sources */,
 				683881411C8B94FB0060D32D /* AppDelegate.swift in Sources */,
+				685ADA6C1C8D8FE2006FFDF8 /* NSDateExtensions.swift in Sources */,
 				685ADA661C8D2D69006FFDF8 /* ParseData.swift in Sources */,
 				685ADA631C8D2763006FFDF8 /* FeedCell.swift in Sources */,
 				685ADA681C8D31F4006FFDF8 /* FeedViewController.swift in Sources */,

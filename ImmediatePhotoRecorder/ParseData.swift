@@ -19,6 +19,7 @@ class ParseData: NSObject {
         media["media"] = image
         media["author"] = PFUser.currentUser()
         media["caption"] = caption
+//        media["bio"] = bio
         media["likesCount"] = 0
         
         image?.saveInBackgroundWithBlock({ (success, error) -> Void in
@@ -34,4 +35,6 @@ class ParseData: NSObject {
         }
         return nil
     }
+
+
 }

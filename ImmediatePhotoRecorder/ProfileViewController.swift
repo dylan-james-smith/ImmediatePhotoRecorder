@@ -13,7 +13,8 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var profileImageButton: UIButton!
-    @IBOutlet weak var logoutButton: UIButton!
+    @IBOutlet weak var logoutImageButton: UIButton!
+    @IBOutlet weak var logoutTextButton: UIButton!
     
     var user: PFUser?
     
@@ -26,7 +27,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         profileImageButton.clipsToBounds = true
         profileImageButton.layer.masksToBounds = true
-        profileImageButton.layer.cornerRadius = profileImageButton.frame.width/4
+        profileImageButton.layer.cornerRadius = profileImageButton.frame.width/2
 
         usernameLabel.text = user?.username
         usernameLabel.font = UIFont(name: "Chalkduster", size: 24)
@@ -41,7 +42,9 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         if user != PFUser.currentUser() {          //viewing other users profile
             profileImageButton.userInteractionEnabled = false
-            logoutButton.hidden = true
+            logoutImageButton.hidden = true
+            logoutTextButton.hidden = true
+            
         }
         
         

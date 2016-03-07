@@ -2,7 +2,7 @@
 
 **ImmediatePhotoRecorder** is a photo sharing app using Parse as its backend.
 
-Time spent: **20** hours spent in total
+Time spent: **25** hours spent in total
 
 ## User Stories
 
@@ -16,7 +16,7 @@ The following **required** functionality is completed:
 
 The following **optional** features are implemented:
 
-- [ ] Show the username and creation time for each post
+- [x] Show the username and creation time for each post
 - [x] After the user submits a new post, show a progress HUD while the post is being uploaded to Parse.
 - [x] User Profiles:
 --- [x] Allow the logged in user to add a profile photo
@@ -28,10 +28,13 @@ The following **additional** features are implemented:
 - [x] Alert message when: user or password empty, user exists, password wrong. Jumps to error textField. 
 - [x] keybord return (next, send) advances field and signs in
 - [x] add fonts and use in title and username
-- [ ] login progress spinner
-- [ ] image loading progress spinner
+- [x] Floating user profile header
+- [ ] large login progress spinner
+- [ ] large image loading progress spinner
+- [ ] add profile Bio
 - [x] choose the photo from camera roll or taking a new picture
 - [x] Pull to refresh
+- [x] "time Passed" Date Extention
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 

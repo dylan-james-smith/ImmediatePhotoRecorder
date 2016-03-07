@@ -12,21 +12,16 @@ import Parse
 
 class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var photos: [PFObject]?
-//    var parseData: [PFObject]?
+    
     
     
     @IBOutlet weak var tableView: UITableView!
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        if let photos = photos {
-            return photos.count
-        } else {
-            return 0
-        }
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: "refreshControlAction:", forControlEvents: UIControlEvents.ValueChanged)
         tableView.insertSubview(refreshControl, atIndex: 0)
@@ -50,12 +45,19 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.automaticallyAdjustsScrollViewInsets = false
     }
 
-    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        if let photos = photos {
+            return photos.count
+        } else {
+            return 0
+        }
+    }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("FeedCell", forIndexPath: indexPath) as! FeedCell
         if let photos = photos {
             let photo = photos[indexPath.section]
             cell.captionLabel.text = photo["caption"] as? String
+            cell.likesLabel.text = photo.createdAt?.timePassed()
             let file = photo["media"] as? PFFile
             file?.getDataInBackgroundWithBlock({ (data, error) -> Void in
                 cell.feedImageView.image = UIImage(data: data!)
@@ -76,9 +78,9 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let profileImageView = UIImageView(frame: CGRect(x: 10, y: 10, width: 45, height: 45))
         profileImageView.clipsToBounds = true
-        profileImageView.layer.cornerRadius = 22.5;
+        profileImageView.layer.cornerRadius = 22.5
         profileImageView.layer.borderColor = UIColor(white: 0.7, alpha: 0.8).CGColor
-        profileImageView.layer.borderWidth = 1;
+        profileImageView.layer.borderWidth = 1
         
         let user = photos![section]["author"] as! PFUser
         
@@ -91,21 +93,20 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let username = UILabel(frame: CGRect(x: 70, y: 25, width: 50, height: 20))
         username.text = user.username
-        headerView.addSubview(username)
         
+        headerView.addSubview(username)
         headerView.addSubview(profileImageView)
         
         headerView.tag = section
-        let tapRecognizer = UITapGestureRecognizer(target: self, action: "onHeader:")
-        headerView.addGestureRecognizer(tapRecognizer)
-        
-        // Add a UILabel for the username here
+        let tap = UITapGestureRecognizer(target: self, action: "onHeader:")
+        headerView.addGestureRecognizer(tap)
+
         
         return headerView
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 65
+        return 45
     }
     
     
