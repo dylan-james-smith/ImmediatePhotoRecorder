@@ -15,12 +15,13 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var captionField: UITextField!
     @IBOutlet weak var uploadButton: UIButton!
     @IBOutlet weak var cancelButton: UIButton!
-    
+    @IBOutlet weak var successLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.initializeViews()
+        successLabel.hidden = true
         
         captionField.delegate = self
         roundButton(imageButton)
@@ -49,6 +50,7 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
     }
     
     @IBAction func onImageButton(sender: AnyObject) {
+        successLabel.hidden = true
         let actionSheet = UIAlertController(title: "Pick a source", message: nil, preferredStyle: .ActionSheet)
         let cameraAction = UIAlertAction(title: "Take a picture", style: .Default) { (action) -> Void in
             let vc = UIImagePickerController()
@@ -90,12 +92,14 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
                     self.uploadProgress.hidden = false
                     if prog == 100 {
                         self.uploadProgress.setProgress(100, animated: false)
-                        
+                        self.successLabel.hidden = false
                         let time = dispatch_time(dispatch_time_t(DISPATCH_TIME_NOW), 2 * Int64(NSEC_PER_SEC))
                         dispatch_after(time, dispatch_get_main_queue()) {
-                            self.tabBarController?.selectedIndex = 0
+                            self.initializeViews()
+//                            self.tabBarController?.selectedIndex = 0
                         }
                     } else {
+                        self.successLabel.hidden = true
                         self.uploadProgress.setProgress(Float(prog), animated: true)
                     }
             })
@@ -113,6 +117,10 @@ class UploadViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBAction func onCancel(sender: AnyObject) {
         self.initializeViews()
         tabBarController?.selectedIndex = 0
+    }
+    
+    override func viewDidDisappear(animated: Bool) {
+        successLabel.hidden = true
     }
     /*
     // MARK: - Navigation

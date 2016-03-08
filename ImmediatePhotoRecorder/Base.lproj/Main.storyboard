@@ -288,6 +288,12 @@
                                     <action selector="onUpload:" destination="PGb-wh-aTG" eventType="touchUpInside" id="IHF-aE-AWK"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upload Successful" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MVd-Ls-osZ">
+                                <rect key="frame" x="111" y="379" width="153" height="19"/>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="15"/>
+                                <color key="textColor" red="0.25098040700000002" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -305,6 +311,8 @@
                             <constraint firstItem="Csw-qI-bLP" firstAttribute="top" secondItem="qbG-9g-m6B" secondAttribute="bottom" constant="35" id="XVH-54-Ty4"/>
                             <constraint firstItem="3oV-6X-tIe" firstAttribute="trailing" secondItem="bmu-Lb-EO3" secondAttribute="trailing" id="Xik-tw-xM4"/>
                             <constraint firstItem="bmu-Lb-EO3" firstAttribute="top" secondItem="zN6-F2-5qc" secondAttribute="bottom" constant="8" id="XoE-pW-fgh"/>
+                            <constraint firstItem="MVd-Ls-osZ" firstAttribute="centerX" secondItem="SDq-rd-nrj" secondAttribute="centerX" id="ZVt-fr-J5G"/>
+                            <constraint firstItem="MVd-Ls-osZ" firstAttribute="top" secondItem="l0F-w2-rDy" secondAttribute="bottom" constant="8" id="bfX-Uc-yyY"/>
                             <constraint firstItem="bmu-Lb-EO3" firstAttribute="leading" secondItem="SDq-rd-nrj" secondAttribute="leading" constant="35" id="cOZ-qE-lwG"/>
                             <constraint firstItem="qbG-9g-m6B" firstAttribute="centerX" secondItem="SDq-rd-nrj" secondAttribute="centerX" id="oeA-fT-6GB"/>
                             <constraint firstItem="bmu-Lb-EO3" firstAttribute="centerX" secondItem="SDq-rd-nrj" secondAttribute="centerX" id="sfs-LD-kgD"/>
@@ -316,6 +324,7 @@
                         <outlet property="cancelButton" destination="Csw-qI-bLP" id="oow-zd-lSU"/>
                         <outlet property="captionField" destination="l0F-w2-rDy" id="NOJ-Zt-5de"/>
                         <outlet property="imageButton" destination="bmu-Lb-EO3" id="QHS-9I-6Tf"/>
+                        <outlet property="successLabel" destination="MVd-Ls-osZ" id="EAg-kB-C5t"/>
                         <outlet property="uploadButton" destination="qbG-9g-m6B" id="ZLg-py-rAy"/>
                         <outlet property="uploadProgress" destination="3oV-6X-tIe" id="N5h-yq-alf"/>
                     </connections>

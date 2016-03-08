@@ -59,7 +59,7 @@ class FeedViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if let photos = photos {
             let photo = photos[indexPath.section]
             cell.captionLabel.text = photo["caption"] as? String
-            cell.likesLabel.text = photo.createdAt?.timePassed()
+            cell.likesLabel.text = photo.createdAt?.timePassedSinceAsString()
             let file = photo["media"] as? PFFile
             file?.getDataInBackgroundWithBlock({ (data, error) -> Void in
                 cell.feedImageView.image = UIImage(data: data!)

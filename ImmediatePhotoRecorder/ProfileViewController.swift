@@ -107,6 +107,9 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         
     }
+    override func viewDidDisappear(animated: Bool) {
+        navigationController?.popViewControllerAnimated(false)
+    }
 
 }
 
